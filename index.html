@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Leonard Anadia — UI/UX Designer + Front-End Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">John Leonard Anadia</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#works" class="nav-link">Works</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#certificates" class="nav-link">Certificates</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-small nav-cta">Hire Me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-text reveal reveal-1">
+      <p class="hero-kicker">UI/UX Designer + Front-End Developer</p>
+      <h1 class="hero-title">John Leonard Anadia</h1>
+      <p class="hero-statement">I design and build modern digital experiences that look great, feel intuitive, and work seamlessly across devices.</p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal-2">
+      <div class="hero-photo-frame">
+        <!-- Replace profile.jpg with your own photo file (keep the same filename, or update the src below) -->
+        <img src="profile.jpg" alt="John Leonard Anadia" class="hero-photo">
+      </div>
+      <div class="code-chip">&lt;/&gt; front-end</div>
+      <div class="design-chip">✎ ui design</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="about-visual">
+      <div class="about-frame"></div>
+    </div>
+    <div class="about-content">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-lead">I'm a 2nd-year Information Systems student with a growing focus on UI/UX design and front-end development.</p>
+      <p class="about-body">I enjoy designing clean interfaces, creating user-friendly experiences, and turning designs into functional, responsive websites. Outside of coursework, I spend most of my time learning modern web technologies and applying them to real projects for real clients.</p>
+      <div class="about-tags">
+        <span class="tag">Based in the Philippines</span>
+        <span class="tag">Specializing in UI/UX &amp; Front-End Development</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <h2 class="section-title">What I Do</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">◧</div>
+        <h3>UI/UX Design</h3>
+        <p>Design clean, intuitive, and user-centered interfaces focused on usability and visual consistency.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">▤</div>
+        <h3>Landing Pages</h3>
+        <p>Create modern landing pages designed to clearly communicate a product, service, or business.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">▣</div>
+        <h3>Business Websites</h3>
+        <p>Design professional websites that help businesses establish a strong online presence.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⌘</div>
+        <h3>Front-End Development</h3>
+        <p>Turn UI designs into responsive, functional websites using modern HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <h2 class="section-title">Tools &amp; Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><span class="skill-name">Figma</span><span class="skill-label">UI/UX Design</span></div>
+      <div class="skill-card"><span class="skill-name">HTML</span><span class="skill-label">Web Structure</span></div>
+      <div class="skill-card"><span class="skill-name">CSS</span><span class="skill-label">Responsive Styling</span></div>
+      <div class="skill-card"><span class="skill-name">JavaScript</span><span class="skill-label">Web Interactions</span></div>
+      <div class="skill-card"><span class="skill-name">Git &amp; GitHub</span><span class="skill-label">Version Control</span></div>
+      <div class="skill-card"><span class="skill-name">VS Code</span><span class="skill-label">Development</span></div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORKS -->
+  <section id="works" class="section works">
+    <h2 class="section-title">Selected Works</h2>
+    <div class="works-filter" id="worksFilter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="client">Client Work</button>
+      <button class="filter-btn" data-filter="design">Website Designs</button>
+      <button class="filter-btn" data-filter="personal">Personal Projects</button>
+    </div>
+    <div class="works-grid" id="worksGrid">
+      <article class="work-card" data-category="client">
+        <div class="work-thumb"><span>Project Preview</span></div>
+        <div class="work-info">
+          <div class="work-meta">
+            <span class="work-category">Client Work</span>
+          </div>
+          <h3>Modern Business Website</h3>
+          <p>A responsive website designed to provide a professional online presence and improve the presentation of the client's services.</p>
+          <p class="work-tools">Figma · HTML · CSS · JavaScript</p>
+          <a href="#" class="work-link">View Project</a>
+        </div>
+      </article>
+      <article class="work-card" data-category="design">
+        <div class="work-thumb"><span>Project Preview</span></div>
+        <div class="work-info">
+          <div class="work-meta">
+            <span class="work-category">Website Designs</span>
+          </div>
+          <h3>Portfolio Website Concept</h3>
+          <p>A design exploration for a minimal, content-first portfolio layout with a strong visual hierarchy.</p>
+          <p class="work-tools">Figma · HTML · CSS</p>
+          <a href="#" class="work-link">View Project</a>
+        </div>
+      </article>
+      <article class="work-card" data-category="personal">
+        <div class="work-thumb"><span>Project Preview</span></div>
+        <div class="work-info">
+          <div class="work-meta">
+            <span class="work-category">Personal Projects</span>
+          </div>
+          <h3>Landing Page Experiment</h3>
+          <p>A self-initiated project exploring interaction design and layout for a product landing page.</p>
+          <p class="work-tools">HTML · CSS · JavaScript</p>
+          <a href="#" class="work-link">View Project</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section testimonials">
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Add your client's feedback here. Keep it short and specific about what it was like to work together.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Client Name</span>
+            <span class="testimonial-role">Role, Company</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Add another testimonial here once you have client feedback to share.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Client Name</span>
+            <span class="testimonial-role">Role, Company</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button id="testimonialPrev" aria-label="Previous testimonial">←</button>
+        <button id="testimonialNext" aria-label="Next testimonial">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="section certificates">
+    <h2 class="section-title">Certificates &amp; Achievements</h2>
+    <div class="cert-grid">
+      <article class="cert-card">
+        <div class="cert-thumb">
+          <!-- Replace with your certificate image, e.g. src="cert-1.jpg" -->
+          <img src="cert-1.jpg" alt="Certificate name">
+        </div>
+        <div class="cert-body">
+          <h3>Certificate Name</h3>
+          <p class="cert-issuer">Issuing Organization · 2026</p>
+          <a href="#" class="work-link">View Certificate</a>
+        </div>
+      </article>
+      <article class="cert-card">
+        <div class="cert-thumb">
+          <img src="cert-2.jpg" alt="Certificate name">
+        </div>
+        <div class="cert-body">
+          <h3>Certificate Name</h3>
+          <p class="cert-issuer">Issuing Organization · 2026</p>
+          <a href="#" class="work-link">View Certificate</a>
+        </div>
+      </article>
+      <article class="cert-card">
+        <div class="cert-thumb">
+          <img src="cert-3.jpg" alt="Certificate name">
+        </div>
+        <div class="cert-body">
+          <h3>Certificate Name</h3>
+          <p class="cert-issuer">Issuing Organization · 2026</p>
+          <a href="#" class="work-link">View Certificate</a>
+        </div>
+      </article>
+      <article class="cert-card">
+        <div class="cert-thumb">
+          <img src="cert-4.jpg" alt="Certificate name">
+        </div>
+        <div class="cert-body">
+          <h3>Certificate Name</h3>
+          <p class="cert-issuer">Issuing Organization · 2026</p>
+          <a href="#" class="work-link">View Certificate</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="contact-inner">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="contact-lead">Have a project in mind? Let's turn your idea into a modern and engaging digital experience.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>Name
+              <input type="text" name="name" placeholder="Your full name" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" placeholder="you@email.com" required>
+            </label>
+          </div>
+          <label>Project Type
+            <select name="project" required>
+              <option value="" disabled selected>Select a project type</option>
+              <option value="landing-page">Landing Page</option>
+              <option value="business-website">Business Website</option>
+              <option value="ui-ux-design">UI/UX Design</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" rows="4" placeholder="Tell me a bit about your project..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+
+        <div class="contact-direct">
+          <p class="contact-direct-label">Direct contact</p>
+          <a href="mailto:hello@johnleonard.dev" class="contact-email">hello@johnleonard.dev</a>
+          <div class="contact-socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+          </div>
+          <a href="#contact" class="btn btn-outline contact-hire">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-name">John Leonard Anadia</p>
+      <p class="footer-title">UI/UX Designer + Front-End Developer</p>
+    </div>
+    <div class="footer-socials">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+      <a href="mailto:hello@johnleonard.dev">Email</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 John Leonard Anadia. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
