@@ -115,7 +115,7 @@ a {
 .eyebrow {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent);
@@ -318,9 +318,15 @@ a {
   margin: 0 auto;
   padding: 170px 32px 110px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1fr) 440px;
   gap: 60px;
   align-items: center;
+}
+.hero-text {
+  min-width: 0;
+}
+.hero-visual {
+  width: 440px;
 }
 .hero-title {
   font-family: var(--font-head);
@@ -1133,14 +1139,13 @@ a {
   vertical-align: bottom;
   max-width: 100%;
   border-right: 3px solid var(--accent);
-  width: 19ch;
   animation:
     hero-typing 2.2s steps(19, end) 0.5s both,
     hero-caret-blink 0.8s step-end infinite;
 }
 @keyframes hero-typing {
-  from { width: 0; }
-  to { width: 19ch; }
+  from { max-width: 0; }
+  to { max-width: 100%; }
 }
 @keyframes hero-caret-blink {
   0%, 100% { border-color: transparent; }
@@ -1208,6 +1213,9 @@ a {
   .hero-inner {
     grid-template-columns: 1fr;
     padding-top: 140px;
+  }
+  .hero-visual {
+    width: 100%;
   }
   .about {
     grid-template-columns: 1fr;
