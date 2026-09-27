@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,7 @@
     <div class="hero-inner">
       <div class="hero-text reveal reveal-1">
         <p class="eyebrow"><span class="dot dot-pink"></span>UI/UX Designer + Front-End Developer</p>
-        <h1 class="hero-title">John Leonard <span class="grad">Anadia</span></h1>
+        <h1 class="hero-title"><span class="typewriter">John Leonard <span class="grad">Anadia</span></span></h1>
         <p class="hero-statement">I design and build modern digital experiences that look great, feel intuitive, and work seamlessly across devices.</p>
         <div class="hero-actions">
           <a href="#works" class="btn btn-light">View My Work <i class="fa-solid fa-arrow-right"></i></a>
@@ -270,6 +271,9 @@ productions through an engaging visual experience.</p>
         </div>
       </article>
     </div>
+    <div class="works-more">
+      <a href="#" class="works-more-link" target="_blank" rel="noopener noreferrer">See more of my work <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
   </section>
 
   <!-- TESTIMONIALS -->
@@ -348,35 +352,37 @@ productions through an engaging visual experience.</p>
   <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="contact-inner">
-      <p class="eyebrow"><span class="dot"></span>Collaboration</p>
-      <h2 class="section-title">Let's Work Together</h2>
-      <p class="contact-lead">Have a project in mind? Let's turn your idea into a modern and engaging digital experience.</p>
-
       <div class="contact-grid">
-        <div class="contact-direct">
-          <p class="contact-direct-label">Direct Contact</p>
-          <a href="mailto:hello@johnleonard.dev" class="contact-email">hello@johnleonard.dev</a>
-          <div class="contact-socials">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
+        <div class="contact-left">
+          <p class="eyebrow"><span class="dot"></span>Collaboration</p>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="contact-lead">Have a project in mind? Let's turn your idea into a modern and engaging digital experience.</p>
+
+          <div class="contact-direct">
+            <p class="contact-direct-label">Direct Contact</p>
+            <a href="mailto:johnleonardmanadia@gmail.com" class="contact-email">johnleonardmanadia@gmail.com</a>
+            <div class="contact-socials">
+              <a href="https://github.com/johnleonardmanadia" target="_blank">GitHub</a>
+              <a href="www.linkedin.com/in/john-leonard-anadia-862a3a431" target="_blank">LinkedIn</a>
+              <a href="https://www.facebook.com/people/John-Leonard/61578504366250/?from_xma_click=1" target="_blank">Facebook</a>
+            </div>
+            <a href="#contact" class="btn btn-outline contact-hire">Hire Me</a>
           </div>
-          <a href="#contact" class="btn btn-outline contact-hire">Hire Me</a>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <label>Name
-              <input type="text" name="name" placeholder="Alex Mercer" required>
-            </label>
-            <label>Email
-              <input type="email" name="email" placeholder="alex@domain.com" required>
-            </label>
-          </div>
-          <label>Message
-            <textarea name="message" rows="4" placeholder="Tell me a bit about your project..." required></textarea>
+        <form class="contact-form contact-form-styled" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <label><span class="field-label">Full Name <span class="req">*</span></span>
+            <input type="text" name="name" placeholder="John Doe" required>
           </label>
-          <button type="submit" class="btn btn-light">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+          <label><span class="field-label">Email Address <span class="req">*</span></span>
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </label>
+          <label><span class="field-label">Project Details <span class="req">*</span></span>
+            <textarea name="message" rows="5" placeholder="Tell me about your project and goals..." required></textarea>
+          </label>
+          <!-- honeypot field to cut down on spam, keep hidden -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn btn-accent">Send Message <i class="fa-solid fa-paper-plane"></i></button>
           <p class="form-status" id="formStatus" role="status"></p>
         </form>
       </div>
@@ -392,12 +398,12 @@ productions through an engaging visual experience.</p>
       <p class="footer-title">UI/UX Designer + Front-End Developer</p>
     </div>
     <div class="footer-socials">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Facebook</a>
-      <a href="mailto:hello@johnleonard.dev">Email</a>
+      <a href="https://github.com/johnleonardmanadia">GitHub</a>
+      <a href="www.linkedin.com/in/john-leonard-anadia-862a3a431">LinkedIn</a>
+      <a href="https://www.facebook.com/people/John-Leonard/61578504366250/?from_xma_click=1">Facebook</a>
+      <a href="mailto:johnleonardmanadia@gmail.com">Email</a>
       <span class="footer-sep">|</span>
-      <a href="#">Source Code</a>
+     <!-- <a href="#">Source Code</a> -->
       <a href="#">Resume</a>
     </div>
   </div>

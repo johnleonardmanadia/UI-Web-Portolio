@@ -956,13 +956,18 @@ a {
 .contact-lead {
   color: var(--muted);
   max-width: 52ch;
-  margin-bottom: 44px;
+  margin-bottom: 36px;
   font-size: 16px;
 }
 .contact-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 48px;
+  align-items: start;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
 }
 .contact-direct {
   display: flex;
@@ -1036,6 +1041,120 @@ a {
 .form-status {
   font-size: 14px;
   min-height: 18px;
+}
+
+/* CONTACT FORM — styled card (uses the site's own accent colors) */
+.contact-form-styled {
+  position: relative;
+  background: #0d0f16;
+  border: 1px solid rgba(79, 209, 255, 0.18);
+  border-radius: 20px;
+  padding: 32px;
+  gap: 22px;
+  overflow: visible;
+}
+.contact-form-styled label {
+  color: var(--accent);
+  font-size: 13px;
+  gap: 10px;
+}
+.field-label {
+  display: inline-block;
+}
+.contact-form-styled .req {
+  color: var(--accent);
+}
+.contact-form-styled input,
+.contact-form-styled textarea {
+  background: #14161f;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #f5f6fa;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+}
+.contact-form-styled input::placeholder,
+.contact-form-styled textarea::placeholder {
+  color: #6b7280;
+}
+.contact-form-styled input:focus,
+.contact-form-styled textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 209, 255, 0.15);
+}
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-accent {
+  align-self: stretch;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #052028;
+  border-radius: 12px;
+}
+.btn-accent:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+/* SELECTED WORKS — "see more" link (uses the site's own accent color) */
+.works-more {
+  text-align: center;
+  margin-top: 36px;
+}
+.works-more-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.works-more-link i {
+  font-size: 13px;
+}
+.works-more-link:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+/* HERO NAME — typewriter effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  max-width: 100%;
+  border-right: 3px solid var(--accent);
+  width: 19ch;
+  animation:
+    hero-typing 2.2s steps(19, end) 0.5s both,
+    hero-caret-blink 0.8s step-end infinite;
+}
+@keyframes hero-typing {
+  from { width: 0; }
+  to { width: 19ch; }
+}
+@keyframes hero-caret-blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent); }
+}
+@media (max-width: 640px) {
+  .typewriter {
+    white-space: normal;
+    width: auto;
+    max-width: none;
+    border-right: none;
+    animation: none;
+    overflow: visible;
+  }
 }
 
 /* FOOTER */
