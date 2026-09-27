@@ -1,3 +1,5 @@
+
+
 // Nav: scroll shadow + mobile toggle + active link highlight
 const nav = document.getElementById("nav");
 const navToggle = document.getElementById("navToggle");
@@ -50,20 +52,71 @@ filterBtns.forEach((btn) => {
 const track = document.getElementById("testimonialTrack");
 const prevBtn = document.getElementById("testimonialPrev");
 const nextBtn = document.getElementById("testimonialNext");
-const slideCount = track.children.length;
+const dotsWrap = document.getElementById("testimonialDots");
+const testimonialCards = Array.from(track.children);
+const slideCount = testimonialCards.length;
+const TESTIMONIAL_GAP = 24; // must match the gap set on .testimonial-track in style.css
 let slideIndex = 0;
 
-function updateSlide() {
-  track.style.transform = `translateX(-${slideIndex * 100}%)`;
+function getVisibleCount() {
+  if (window.innerWidth <= 640) return 1;
+  if (window.innerWidth <= 900) return 2;
+  return 3;
 }
+
+function maxSlideIndex() {
+  return Math.max(0, slideCount - getVisibleCount());
+}
+
+function buildDots() {
+  if (!dotsWrap) return;
+  dotsWrap.innerHTML = "";
+  for (let i = 0; i <= maxSlideIndex(); i++) {
+    const dot = document.createElement("button");
+    dot.className = "testimonial-dot";
+    dot.setAttribute("aria-label", `Go to testimonial ${i + 1}`);
+    dot.addEventListener("click", () => {
+      slideIndex = i;
+      updateSlide();
+    });
+    dotsWrap.appendChild(dot);
+  }
+}
+
+function updateSlide() {
+  const maxIndex = maxSlideIndex();
+  slideIndex = Math.min(slideIndex, maxIndex);
+  const cardWidth = testimonialCards[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${slideIndex * (cardWidth + TESTIMONIAL_GAP)}px)`;
+  if (dotsWrap) {
+    Array.from(dotsWrap.children).forEach((dot, i) => {
+      dot.classList.toggle("active", i === slideIndex);
+    });
+  }
+}
+
 prevBtn.addEventListener("click", () => {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+  const max = maxSlideIndex();
+  slideIndex = (slideIndex - 1 + max + 1) % (max + 1);
   updateSlide();
 });
 nextBtn.addEventListener("click", () => {
-  slideIndex = (slideIndex + 1) % slideCount;
+  const max = maxSlideIndex();
+  slideIndex = (slideIndex + 1) % (max + 1);
   updateSlide();
 });
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    buildDots();
+    updateSlide();
+  }, 150);
+});
+
+buildDots();
+updateSlide();
 
 // Contact form (front-end only — connect to a backend or form service to send real messages)
 const form = document.getElementById("contactForm");
