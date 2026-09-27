@@ -7,25 +7,27 @@
 <title>John Leonard Anadia — UI/UX Designer + Front-End Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/style/style.css">
 </head>
 <body>
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#home" class="nav-logo">John Leonard Anadia</a>
+    <a href="#home" class="nav-logo"><span class="dot"></span>John Leonard Anadia</a>
     <nav class="nav-links" id="navLinks">
       <a href="#home" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#services" class="nav-link">Services</a>
-      <a href="#skills" class="nav-link">Skills</a>
       <a href="#works" class="nav-link">Works</a>
       <a href="#testimonials" class="nav-link">Testimonials</a>
-      <a href="#certificates" class="nav-link">Certificates</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-small nav-cta">Hire Me</a>
+    <div class="nav-actions">
+      <a href="#" class="icon-btn" aria-label="Source code">&lt;/&gt;</a>
+      <a href="#works" class="icon-btn" aria-label="Gallery">▣</a>
+      <a href="#contact" class="btn btn-primary btn-small">Hire Me</a>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -36,33 +38,65 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-text reveal reveal-1">
-      <p class="hero-kicker">UI/UX Designer + Front-End Developer</p>
-      <h1 class="hero-title">John Leonard Anadia</h1>
-      <p class="hero-statement">I design and build modern digital experiences that look great, feel intuitive, and work seamlessly across devices.</p>
-      <div class="hero-actions">
-        <a href="#works" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Hire Me</a>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text reveal reveal-1">
+        <p class="eyebrow"><span class="dot dot-pink"></span>UI/UX Designer + Front-End Developer</p>
+        <h1 class="hero-title">John Leonard <span class="grad">Anadia</span></h1>
+        <p class="hero-statement">I design and build modern digital experiences that look great, feel intuitive, and work seamlessly across devices.</p>
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-light">View My Work →</a>
+          <a href="#contact" class="btn btn-outline">Hire Me</a>
+        </div>
+        <div class="hero-chips">
+          <span class="chip">&lt;/&gt; front-end</span>
+          <span class="chip">✎ ui design</span>
+        </div>
       </div>
-    </div>
-    <div class="hero-visual reveal reveal-2">
-      <div class="hero-photo-frame">
-        <!-- Replace profile.jpg with your own photo file (keep the same filename, or update the src below) -->
-        <img src="profile.jpg" alt="John Leonard Anadia" class="hero-photo">
+      <div class="hero-visual reveal reveal-2">
+        <div class="hero-photo-frame">
+          <span class="status-badge"><span class="dot dot-green sm"></span>Available for Work</span>
+          <!-- Replace profile.jpg with your own photo file -->
+          <img src="profile.jpg" alt="John Leonard Anadia" class="hero-photo" onerror="this.style.display='none'">
+          <div class="hero-info-card">
+            <div>
+              <p class="hero-info-name">John Leonard Anadia</p>
+              <p class="hero-info-role">UI/UX Designer &amp; Dev</p>
+            </div>
+            <span class="icon-chip">&lt;/&gt;</span>
+          </div>
+        </div>
       </div>
-      <div class="code-chip">&lt;/&gt; front-end</div>
-      <div class="design-chip">✎ ui design</div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section about">
     <div class="about-visual">
-      <div class="about-frame"></div>
+      <div class="term-card">
+        <div class="term-bar">
+          <span class="term-file">profile.meta.json</span>
+          <span class="dot dot-green sm"></span>
+        </div>
+        <div class="term-body">
+          <p class="term-comment">// Bio Snapshot</p>
+          <p class="term-text">Passionate about bridging high-craft visual interfaces with surgical web performance and modular CSS architecture.</p>
+          <div class="term-stats">
+            <div class="term-stat">
+              <p class="term-stat-label">Academic Year</p>
+              <p class="term-stat-value">2nd-Year IS</p>
+            </div>
+            <div class="term-stat">
+              <p class="term-stat-label">Core Focus</p>
+              <p class="term-stat-value accent">UI/UX + Front-End</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="about-content">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-lead">I'm a 2nd-year Information Systems student with a growing focus on UI/UX design and front-end development.</p>
+      <p class="eyebrow"><span class="dot"></span>ABOUT ME</p>
+      <h2 class="section-title">I'm a 2nd-year Information Systems student with a growing focus on UI/UX design and front-end development.</h2>
       <p class="about-body">I enjoy designing clean interfaces, creating user-friendly experiences, and turning designs into functional, responsive websites. Outside of coursework, I spend most of my time learning modern web technologies and applying them to real projects for real clients.</p>
       <div class="about-tags">
         <span class="tag">Based in the Philippines</span>
@@ -73,88 +107,162 @@
 
   <!-- SERVICES -->
   <section id="services" class="section services">
-    <h2 class="section-title">What I Do</h2>
+    <div class="services-head">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>Core Capabilities</p>
+        <h2 class="section-title">What I Do</h2>
+      </div>
+      <p class="services-intro">Providing cohesive end-to-end design and front-end execution from structural prototyping to deployment.</p>
+    </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">◧</div>
+        <div class="service-icon icon-purple">▦</div>
         <h3>UI/UX Design</h3>
         <p>Design clean, intuitive, and user-centered interfaces focused on usability and visual consistency.</p>
+        <p class="service-num">01 / Wireframing &amp; Prototyping</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">▤</div>
+        <div class="service-icon icon-blue">▤</div>
         <h3>Landing Pages</h3>
         <p>Create modern landing pages designed to clearly communicate a product, service, or business.</p>
+        <p class="service-num">02 / Conversion-focused Layouts</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">▣</div>
+        <div class="service-icon icon-pink">🖥</div>
         <h3>Business Websites</h3>
         <p>Design professional websites that help businesses establish a strong online presence.</p>
+        <p class="service-num">03 / Digital Brand Presence</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">⌘</div>
+        <div class="service-icon icon-cyan">&lt;/&gt;</div>
         <h3>Front-End Development</h3>
         <p>Turn UI designs into responsive, functional websites using modern HTML, CSS, and JavaScript.</p>
+        <p class="service-num">04 / Semantic &amp; Responsive Code</p>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- TOOLS & SKILLS -->
   <section id="skills" class="section skills">
-    <h2 class="section-title">Tools &amp; Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card"><span class="skill-name">Figma</span><span class="skill-label">UI/UX Design</span></div>
-      <div class="skill-card"><span class="skill-name">HTML</span><span class="skill-label">Web Structure</span></div>
-      <div class="skill-card"><span class="skill-name">CSS</span><span class="skill-label">Responsive Styling</span></div>
-      <div class="skill-card"><span class="skill-name">JavaScript</span><span class="skill-label">Web Interactions</span></div>
-      <div class="skill-card"><span class="skill-name">Git &amp; GitHub</span><span class="skill-label">Version Control</span></div>
-      <div class="skill-card"><span class="skill-name">VS Code</span><span class="skill-label">Development</span></div>
+    <p class="eyebrow center"><span class="dot"></span>Tech Stack &amp; Workflow</p>
+    <h2 class="section-title center">Tools &amp; Skills</h2>
+    <div class="marquee">
+      <div class="marquee-track" id="marqueeTrack">
+        <div class="skill-card"><span class="skill-icon">✎</span><span><span class="skill-name">Figma</span><span class="skill-label">UI/UX Design</span></span></div>
+        <div class="skill-card"><span class="skill-icon">&lt;&gt;</span><span><span class="skill-name">HTML</span><span class="skill-label">Web Structure</span></span></div>
+        <div class="skill-card"><span class="skill-icon">🎨</span><span><span class="skill-name">CSS</span><span class="skill-label">Responsive Styling</span></span></div>
+        <div class="skill-card"><span class="skill-icon">⚡</span><span><span class="skill-name">JavaScript</span><span class="skill-label">Web Interactions</span></span></div>
+        <div class="skill-card"><span class="skill-icon">⌥</span><span><span class="skill-name">Git &amp; GitHub</span><span class="skill-label">Version Control</span></span></div>
+        <div class="skill-card"><span class="skill-icon">▣</span><span><span class="skill-name">VS Code</span><span class="skill-label">Development</span></span></div>
+        <div class="skill-card"><span class="skill-icon">▤</span><span><span class="skill-name">Bootstrap</span><span class="skill-label">UI Framework</span></span></div>
+        <div class="skill-card"><span class="skill-icon">〜</span><span><span class="skill-name">Tailwind CSS</span><span class="skill-label">Utility-First Styling</span></span></div>
+        <div class="skill-card"><span class="skill-icon">▲</span><span><span class="skill-name">Vercel</span><span class="skill-label">Deployment</span></span></div>
+        <div class="skill-card"><span class="skill-icon">◈</span><span><span class="skill-name">Netlify</span><span class="skill-label">Hosting &amp; Deployment</span></span></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">✎</span><span><span class="skill-name">Figma</span><span class="skill-label">UI/UX Design</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">&lt;&gt;</span><span><span class="skill-name">HTML</span><span class="skill-label">Web Structure</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">🎨</span><span><span class="skill-name">CSS</span><span class="skill-label">Responsive Styling</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">⚡</span><span><span class="skill-name">JavaScript</span><span class="skill-label">Web Interactions</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">⌥</span><span><span class="skill-name">Git &amp; GitHub</span><span class="skill-label">Version Control</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">▣</span><span><span class="skill-name">VS Code</span><span class="skill-label">Development</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">▤</span><span><span class="skill-name">Bootstrap</span><span class="skill-label">UI Framework</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">〜</span><span><span class="skill-name">Tailwind CSS</span><span class="skill-label">Utility-First Styling</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">▲</span><span><span class="skill-name">Vercel</span><span class="skill-label">Deployment</span></span></div>
+        <div class="skill-card" aria-hidden="true"><span class="skill-icon">◈</span><span><span class="skill-name">Netlify</span><span class="skill-label">Hosting &amp; Deployment</span></span></div>
+      </div>
     </div>
   </section>
 
   <!-- SELECTED WORKS -->
   <section id="works" class="section works">
-    <h2 class="section-title">Selected Works</h2>
+    <h2 class="section-title" style="margin-bottom:8px">Selected Works</h2>
+    <p class="eyebrow" style="margin-bottom:32px"><span class="dot"></span>Portfolio Showcase</p>
     <div class="works-filter" id="worksFilter">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="client">Client Work</button>
-      <button class="filter-btn" data-filter="design">Website Designs</button>
-      <button class="filter-btn" data-filter="personal">Personal Projects</button>
+      <button class="filter-btn active" data-filter="web">Web Project</button>
+      <button class="filter-btn" data-filter="ui">UI Designer</button>
     </div>
     <div class="works-grid" id="worksGrid">
-      <article class="work-card" data-category="client">
-        <div class="work-thumb"><span>Project Preview</span></div>
-        <div class="work-info">
-          <div class="work-meta">
-            <span class="work-category">Client Work</span>
-          </div>
-          <h3>Modern Business Website</h3>
-          <p>A responsive website designed to provide a professional online presence and improve the presentation of the client's services.</p>
-          <p class="work-tools">Figma · HTML · CSS · JavaScript</p>
-          <a href="#" class="work-link">View Project</a>
+      <article class="work-card" data-category="web">
+        <div class="work-thumb">
+          <!-- Replace with a screenshot of your portfolio website, e.g. src="work-1.jpg" -->
+          <img src="work-1.jpg" alt="Personal Portfolio Website screenshot" onerror="this.style.display='none'">
+          <span class="thumb-badge">Project Preview</span>
         </div>
-      </article>
-      <article class="work-card" data-category="design">
-        <div class="work-thumb"><span>Project Preview</span></div>
         <div class="work-info">
-          <div class="work-meta">
-            <span class="work-category">Website Designs</span>
-          </div>
-          <h3>Portfolio Website Concept</h3>
-          <p>A design exploration for a minimal, content-first portfolio layout with a strong visual hierarchy.</p>
+          <span class="work-category cat-client">Web Project</span>
+          <h3>Personal Portfolio Website</h3>
+          <p>A responsive portfolio website designed and built to showcase UI/UX design and front-end development work.</p>
           <p class="work-tools">Figma · HTML · CSS</p>
-          <a href="#" class="work-link">View Project</a>
+          <a href="#" class="work-link">View Project ↗</a>
         </div>
       </article>
-      <article class="work-card" data-category="personal">
-        <div class="work-thumb"><span>Project Preview</span></div>
+      <article class="work-card hidden" data-category="ui">
+        <div class="work-thumb">
+          <img src="work-2.jpg" alt="UI/UX case study screenshot" onerror="this.style.display='none'">
+          <span class="thumb-badge">Project Preview</span>
+        </div>
         <div class="work-info">
-          <div class="work-meta">
-            <span class="work-category">Personal Projects</span>
-          </div>
-          <h3>Landing Page Experiment</h3>
-          <p>A self-initiated project exploring interaction design and layout for a product landing page.</p>
+          <span class="work-category cat-design">UI Designer</span>
+          <h3>UI/UX Case Study</h3>
+          <p>Placeholder slot for a UI/UX case study — replace this with a real project once ready.</p>
+          <p class="work-tools">Figma · CSS · JavaScript</p>
+          <a href="#" class="work-link">View Project ↗</a>
+        </div>
+      </article>
+      <article class="work-card" data-category="web">
+        <div class="work-thumb">
+          <!-- Replace with a real project screenshot, e.g. src="work-3.jpg" -->
+          <img src="work-3.jpg" alt="Landing page build screenshot" onerror="this.style.display='none'">
+          <span class="thumb-badge">Project Preview</span>
+        </div>
+        <div class="work-info">
+          <span class="work-category cat-personal">Web Project</span>
+          <h3>Landing Page Build</h3>
+          <p>Placeholder slot for a web development project — replace this with a real project once ready.</p>
           <p class="work-tools">HTML · CSS · JavaScript</p>
-          <a href="#" class="work-link">View Project</a>
+          <a href="#" class="work-link">View Project ↗</a>
+        </div>
+      </article>
+      <article class="work-card" data-category="web">
+        <div class="work-thumb">
+          <!-- Replace with a real project screenshot, e.g. src="work-4.jpg" -->
+          <img src="work-4.jpg" alt="Web app prototype screenshot" onerror="this.style.display='none'">
+          <span class="thumb-badge">Project Preview</span>
+        </div>
+        <div class="work-info">
+          <span class="work-category cat-personal">Web Project</span>
+          <h3>Web App Prototype</h3>
+          <p>Placeholder slot for a web development project — replace this with a real project once ready.</p>
+          <p class="work-tools">HTML · CSS · JavaScript</p>
+          <a href="#" class="work-link">View Project ↗</a>
+        </div>
+      </article>
+      <article class="work-card hidden" data-category="ui">
+        <div class="work-thumb">
+          <!-- Replace with a real project screenshot, e.g. src="work-5.jpg" -->
+          <img src="work-5.jpg" alt="Design exploration screenshot" onerror="this.style.display='none'">
+          <span class="thumb-badge">Project Preview</span>
+        </div>
+        <div class="work-info">
+          <span class="work-category cat-design">UI Designer</span>
+          <h3>Design Exploration</h3>
+          <p>Placeholder slot for a design exploration project — replace this with a real project once ready.</p>
+          <p class="work-tools">Figma · CSS · JavaScript</p>
+          <a href="#" class="work-link">View Project ↗</a>
+        </div>
+      </article>
+      <article class="work-card hidden" data-category="ui">
+        <div class="work-thumb">
+          <!-- Replace with a real project screenshot, e.g. src="work-6.jpg" -->
+          <img src="work-6.jpg" alt="Mobile app UI concept screenshot" onerror="this.style.display='none'">
+          <span class="thumb-badge">Project Preview</span>
+        </div>
+        <div class="work-info">
+          <span class="work-category cat-design">UI Designer</span>
+          <h3>Mobile App UI Concept</h3>
+          <p>Placeholder slot for a mobile app UI concept — replace this with a real project once ready.</p>
+          <p class="work-tools">Figma · CSS · JavaScript</p>
+          <a href="#" class="work-link">View Project ↗</a>
         </div>
       </article>
     </div>
@@ -162,75 +270,68 @@
 
   <!-- TESTIMONIALS -->
   <section id="testimonials" class="section testimonials">
-    <h2 class="section-title">What Clients Say</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial-track" id="testimonialTrack">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Add your client's feedback here. Keep it short and specific about what it was like to work together.</p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Client Name</span>
-            <span class="testimonial-role">Role, Company</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Add another testimonial here once you have client feedback to share.</p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Client Name</span>
-            <span class="testimonial-role">Role, Company</span>
-          </div>
-        </div>
+    <div class="testimonials-head">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>Endorsements</p>
+        <h2 class="section-title">What Clients Say</h2>
       </div>
       <div class="testimonial-controls">
         <button id="testimonialPrev" aria-label="Previous testimonial">←</button>
         <button id="testimonialNext" aria-label="Next testimonial">→</button>
       </div>
     </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <p class="testimonial-mark">❝</p>
+          <p class="testimonial-quote">Add your client's feedback here. Keep it short and specific about what it was like to work together.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">CN</span>
+            <span>
+              <span class="testimonial-name">Client Name</span>
+              <span class="testimonial-role">Role, Company</span>
+            </span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-mark">❝</p>
+          <p class="testimonial-quote">Add another testimonial here once you have client feedback to share.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">CN</span>
+            <span>
+              <span class="testimonial-name">Client Name</span>
+              <span class="testimonial-role">Role, Company</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- CERTIFICATES -->
   <section id="certificates" class="section certificates">
+    <p class="eyebrow"><span class="dot"></span>Verified Credentials</p>
     <h2 class="section-title">Certificates &amp; Achievements</h2>
     <div class="cert-grid">
       <article class="cert-card">
-        <div class="cert-thumb">
-          <!-- Replace with your certificate image, e.g. src="cert-1.jpg" -->
-          <img src="cert-1.jpg" alt="Certificate name">
-        </div>
-        <div class="cert-body">
-          <h3>Certificate Name</h3>
-          <p class="cert-issuer">Issuing Organization · 2026</p>
-          <a href="#" class="work-link">View Certificate</a>
-        </div>
+        <div class="cert-icon icon-pink">🏅</div>
+        <div class="cert-body"><h3>Certificate Name</h3><p class="cert-issuer">Issuing Organization · 2026</p></div>
+        <a href="#" class="work-link cert-link">View Certificate ↗</a>
       </article>
       <article class="cert-card">
-        <div class="cert-thumb">
-          <img src="cert-2.jpg" alt="Certificate name">
-        </div>
-        <div class="cert-body">
-          <h3>Certificate Name</h3>
-          <p class="cert-issuer">Issuing Organization · 2026</p>
-          <a href="#" class="work-link">View Certificate</a>
-        </div>
+        <div class="cert-icon icon-blue">✓</div>
+        <div class="cert-body"><h3>Certificate Name</h3><p class="cert-issuer">Issuing Organization · 2026</p></div>
+        <a href="#" class="work-link cert-link">View Certificate ↗</a>
       </article>
       <article class="cert-card">
-        <div class="cert-thumb">
-          <img src="cert-3.jpg" alt="Certificate name">
-        </div>
-        <div class="cert-body">
-          <h3>Certificate Name</h3>
-          <p class="cert-issuer">Issuing Organization · 2026</p>
-          <a href="#" class="work-link">View Certificate</a>
-        </div>
+        <div class="cert-icon icon-red">✎</div>
+        <div class="cert-body"><h3>Certificate Name</h3><p class="cert-issuer">Issuing Organization · 2026</p></div>
+        <a href="#" class="work-link cert-link">View Certificate ↗</a>
       </article>
       <article class="cert-card">
-        <div class="cert-thumb">
-          <img src="cert-4.jpg" alt="Certificate name">
-        </div>
-        <div class="cert-body">
-          <h3>Certificate Name</h3>
-          <p class="cert-issuer">Issuing Organization · 2026</p>
-          <a href="#" class="work-link">View Certificate</a>
-        </div>
+        <div class="cert-icon icon-purple">🎓</div>
+        <div class="cert-body"><h3>Certificate Name</h3><p class="cert-issuer">Issuing Organization · 2026</p></div>
+        <a href="#" class="work-link cert-link">View Certificate ↗</a>
       </article>
     </div>
   </section>
@@ -238,37 +339,13 @@
   <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="contact-inner">
+      <p class="eyebrow"><span class="dot"></span>Collaboration</p>
       <h2 class="section-title">Let's Work Together</h2>
       <p class="contact-lead">Have a project in mind? Let's turn your idea into a modern and engaging digital experience.</p>
 
       <div class="contact-grid">
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <label>Name
-              <input type="text" name="name" placeholder="Your full name" required>
-            </label>
-            <label>Email
-              <input type="email" name="email" placeholder="you@email.com" required>
-            </label>
-          </div>
-          <label>Project Type
-            <select name="project" required>
-              <option value="" disabled selected>Select a project type</option>
-              <option value="landing-page">Landing Page</option>
-              <option value="business-website">Business Website</option>
-              <option value="ui-ux-design">UI/UX Design</option>
-              <option value="other">Other</option>
-            </select>
-          </label>
-          <label>Message
-            <textarea name="message" rows="4" placeholder="Tell me a bit about your project..." required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <p class="form-status" id="formStatus" role="status"></p>
-        </form>
-
         <div class="contact-direct">
-          <p class="contact-direct-label">Direct contact</p>
+          <p class="contact-direct-label">Direct Contact</p>
           <a href="mailto:hello@johnleonard.dev" class="contact-email">hello@johnleonard.dev</a>
           <div class="contact-socials">
             <a href="#">GitHub</a>
@@ -277,6 +354,22 @@
           </div>
           <a href="#contact" class="btn btn-outline contact-hire">Hire Me</a>
         </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>Name
+              <input type="text" name="name" placeholder="Alex Mercer" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" placeholder="alex@domain.com" required>
+            </label>
+          </div>
+          <label>Message
+            <textarea name="message" rows="4" placeholder="Tell me a bit about your project..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-light">Send Message →</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -294,11 +387,14 @@
       <a href="#">LinkedIn</a>
       <a href="#">Facebook</a>
       <a href="mailto:hello@johnleonard.dev">Email</a>
+      <span class="footer-sep">|</span>
+      <a href="#">Source Code</a>
+      <a href="#">Resume</a>
     </div>
   </div>
   <p class="footer-copy">© 2026 John Leonard Anadia. All rights reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="public/js/script.js"></script>
 </body>
 </html>
