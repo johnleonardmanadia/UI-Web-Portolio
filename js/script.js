@@ -131,6 +131,6 @@ form.addEventListener("submit", (e) => {
   }
   status.style.color = "#4ADE80";
   status.textContent =
-    "Thanks — your message has been noted. (Connect this form to an email service to actually send it.)";
+    "Thanks — your message has been noted.";
   form.reset();
 });
